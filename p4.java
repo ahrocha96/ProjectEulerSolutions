@@ -8,7 +8,7 @@ public class p4 {
 		for (int i = 100; i < 1000; i++) {
 			for (int j = 100; j < 1000; j++) {
 				product = i * j;
-				if (isPalindrome(product)) {
+				if (isPalindrome(product) && product > largestPalindrome) {
 					multiplier = i;
 					multiplicand = j;
 					largestPalindrome = product;
@@ -21,13 +21,13 @@ public class p4 {
 
 	public static boolean isPalindrome(int x) {
 		String s = Integer.toString(x);
-		int length = s.length();
-		if (length % 2 == 0) {
-			
+		String reverse = new StringBuffer(s).reverse().toString();
+		if (s.equals(reverse)) {
+			return true;
 		}
-		else{
-			
+		else {
+			return false;
 		}
-		return true;
+
 	}
 }
