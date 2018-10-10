@@ -3,8 +3,7 @@ public class p3 {
 	public static void main(String args[]) {
 		long n = 600851475143L;
 		long largestPrimeFactor = 0;
-		for (long i = 1; i <= n; i=i+2) {
-			System.out.println(largestPrimeFactor);
+		for (long i = 1; i <= n; i = i + 2) {
 			if (isFactor(i, n) && isPrime(i)) {
 				n = n / i;
 				largestPrimeFactor = i;
